@@ -3,40 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Portfolio of [Your Name]">
-  <title>[Your Name] - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <meta name="description" content="Personal Portfolio of Venkata Anirudh Pillala">
+  <title>Venkata Anirudh Pillala - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navigation Bar -->
   <header>
-    <nav>
+    <nav class="navbar">
+      <!-- Logo/Avatar Section -->
       <div class="logo">
-        <a href="#">[Your Name]</a>
+        <span class="name">Venkata Anirudh Pillala</span>
       </div>
+  
+      <!-- Navigation Links -->
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>I'm a Web Developer | Designer | Creator</p>
-    <a href="#projects" class="cta-btn">View My Work</a>
+    <div class="hero-container">
+      <!-- Avatar/Image -->
+      <div class="hero-avatar">
+        <img src="assets/images/hero-bg.JPG" alt="Venkata Anirudh Pillala" class="avatar">
+      </div>
+  
+      <!-- Text Content -->
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="highlight">Anirudh</span></h1>
+        <p>I'm a <strong>Web Developer</strong> | <strong>DevOps Engineer</strong></p>
+        <a href="#projects" class="cta-btn">View My Work</a>
+      </div>
+    </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I'm a passionate developer with experience in building modern web applications.</p>
-      <p>I specialize in frontend technologies like React, HTML, CSS, and JavaScript. I also enjoy working with backend technologies such as Node.js and databases.</p>
+      <p class="about-text">
+        Hi, I'm <span class="highlight">Venkata Anirudh Pillala</span>, a passionate <strong>Web Developer</strong> and <strong>DevOps Engineer</strong> with expertise in building modern web applications and managing cloud infrastructure on platforms like <strong>AWS</strong> and <strong>GCP</strong>. I specialize in frontend technologies like <strong>React, HTML, CSS, and JavaScript</strong>, while also excelling in backend development using <strong>Node.js</strong> and databases. My DevOps experience includes designing CI/CD pipelines, automating workflows with <strong>Ansible</strong> and <strong>Docker</strong>, and optimizing system reliability. Beyond development, I enjoy sharpening my problem-solving skills on <strong>LeetCode</strong> and exploring <strong>Data Structures & Algorithms (DSA)</strong>. With strong fundamentals in <strong>Networking</strong> and <strong>Operating Systems</strong>, I tackle complex challenges effectively. Let's connect and collaborate on impactful projects!
+      </p>
     </div>
   </section>
 
@@ -46,32 +66,181 @@
       <h2>My Projects</h2>
       <div class="swiper-container">
         <div class="swiper-wrapper">
+          <!-- Project 1 -->
           <div class="swiper-slide">
-            <img src="project1.jpg" alt="Project 1">
-            <p>Project 1 description</p>
+            <h3>Movie Web App using Flask</h3>
+            <p>
+              Built and deployed a full-stack movie discovery web app using Flask, TMDB, and Wikipedia APIs. The app allows users to search for movies, view details, and leave ratings/comments. It was deployed on Google Cloud Run for scalability and includes secure user authentication with PostgreSQL integration.
+            </p>
           </div>
+          <!-- Project 2 -->
           <div class="swiper-slide">
-            <img src="project2.jpg" alt="Project 2">
-            <p>Project 2 description</p>
+            <h3>LLM Prompt Recovery Project</h3>
+            <p>
+              Developed a probabilistic model to recover prompts from LLM API responses, focusing on minimizing privacy risks while enhancing recovery accuracy. Implemented privacy-preserving techniques like differential privacy for secure prompt extraction.
+            </p>
           </div>
-          <!-- Add more projects here -->
+          <!-- Project 3 -->
+          <div class="swiper-slide">
+            <h3>Segmentation of Brain Regions from MRI Images</h3>
+            <p>
+              Segmented brain regions, including the left lateral ventricle and CSF, from MRI images using image processing methods and machine learning. The XGB algorithm outperformed others with a DSC of 51.35%, demonstrating superior accuracy in segmentation tasks.
+            </p>
+          </div>
+          <!-- Project 4 -->
+          <div class="swiper-slide">
+            <h3>Reinforcement Learning Project</h3>
+            <p>
+              Analyzed Reddit user post data using reinforcement learning techniques to predict content and optimize user interactions. The project involved running simulations to understand model behavior and recovery.
+            </p>
+          </div>
+          <!-- Project 5 -->
+          <div class="swiper-slide">
+            <h3>PILCO and Deep PILCO Algorithm for Cardiac Control and Deep Brain Simulation</h3>
+            <p>
+              Implemented the PILCO algorithm for oscillator suppression and VNS cardiac modulation. Expanded to Deep PILCO for deep brain simulation, using neural networks to improve learning and achieve higher reward rates in complex dynamic systems.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
     <div class="container">
-      <h2>Contact Me</h2>
-      <form action="send-message.php" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <!-- Research Assistant at Emory University -->
+        <div class="experience-item">
+          <h3>Emory - Research Assistant </h3>
+          <p class="role">Jan 2024 - Present, Atlanta, Georgia</p>
+          <ul>
+            <li><strong>Project 1: Exploring Adolescent-Like Social Media Use in a Reward Learning Framework</strong></li>
+            <ul>
+              <li>Implemented Reddit API integration for accessing and scraping posts from various subreddits.</li>
+              <li>Developed a BERT-based text classification model for age prediction, leveraging advanced NLP techniques to analyze textual data.</li>
+              <li>Currently tuning the model to predict future psychopathology based on post texts using NLP and semantic-based techniques.</li>
+            </ul>
+            <li><strong>Project 2: Neurocognitive Mechanisms of Reward-Motivated Memory Persistence Across Age</strong></li>
+            <ul>
+              <li>Constructed a dynamic survey on the Qualtrics platform for teenage participants, ensuring a seamless user experience.</li>
+              <li>Troubleshot and resolved issues related to accurate recording of response times for button clicks in the survey.</li>
+              <li>Restructured compliance monitoring by 70%, automating the tracking of missed survey days and decreasing manual follow-ups.</li>
+              <li>Developed a dynamic progress bar to visualize user completion status in real-time.</li>
+              <li>Automated the renaming, organization, and uploading of snap-space images to OneDrive using an R script, cutting down manual sorting efforts by half and improving data accessibility for researchers.</li>
+            </ul>
+          </ul>
+        </div>
+        <!-- DevOps Engineer at Accenture -->
+        <div class="experience-item">
+          <h3>Accenture - DevOps Engineer  </h3>
+          <p class="role">Aug 2021 - June 2023, Bengaluru, India</p>
+          <ul>
+            <li>Designed and created Jenkins pipelines for CI/CD of applications for traditional or containerized deployments.</li>
+            <li>Implemented Kubernetes configurations for deployment, scaling, and management of containerized applications, enhancing system reliability and reducing manual intervention by 60%.</li>
+            <li>Constructed pipelines for automation of data quality analysis, validation, migration, and report generation, resulting in improved workflows.</li>
+            <li>Migrated and upgraded 38 Jenkins pipelines across instances, integrating Ansible playbooks to reduce infrastructure costs by 30% and standardize deployment workflows.</li>
+            <li>Planned, deployed, and managed Azure cloud infrastructure, including HDIcluster, VMs, Kubernetes services, and databases.</li>
+          </ul>
+        </div>
+        <!-- Software Intern at Virtusa -->
+        <div class="experience-item">
+          <h3>Virtusa - Software Intern  </h3>
+          <p class="role">May 2020 - July 2020, Chennai, India</p>
+          <ul>
+            <li>Developed a full-stack E-commerce web application using Java 8, Spring Boot (Spring MVC, JPA, Security), and FreeMarker with Bootstrap for a responsive frontend.</li>
+            <li>Integrated PayPal API for seamless online payments, enhancing transaction success rates by 30% and improving the user checkout experience.</li>
+            <li>Optimized MySQL database queries, reducing response times by 25% and ensuring efficient data management for both development and production environments.</li>
+            <li>Utilized Git and GitHub for version control, enabling seamless team collaboration and project tracking within an Agile development environment.</li>
+          </ul>
+        </div>
+        <!-- Research Intern at CDAC -->
+        <div class="experience-item">
+          <h3>CDAC - Research Intern </h3>
+          <p class="role">May 2019 - June 2019, Bengaluru, India</p>
+          <ul>
+            <li>Studied in-depth Blockchain technology and its applications in various industries.</li>
+            <li>Implemented a private blockchain using JavaScript and Solidity, experimenting with smart contracts and decentralized applications.</li>
+            <li>Developed an escrow transaction using Remix IDE, demonstrating the potential of blockchain for secure and transparent transactions.</li>
+            <li>Reviewed and analyzed various research papers on the implementation of Public Key Infrastructure (PKI) using blockchain for enhanced security and privacy.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Skills Section -->
+<section id="skills" class="skills">
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <!-- Skill Group 1 -->
+      <div class="skill-item">
+        <h3>Languages</h3>
+        <p>Python, Java, C++, JavaScript (ES6+), SQL, Swift (Basic), R</p>
+      </div>
+      <!-- Skill Group 2 -->
+      <div class="skill-item">
+        <h3>Web Development</h3>
+        <p>HTML5, CSS3, React.js, Flask, Node.js</p>
+      </div>
+      <!-- Skill Group 3 -->
+      <div class="skill-item">
+        <h3>Backend & Databases</h3>
+        <p>PostgreSQL, MongoDB, Flask, Django, Express.js</p>
+      </div>
+      <!-- Skill Group 4 -->
+      <div class="skill-item">
+        <h3>Cloud & DevOps</h3>
+        <p>AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)</p>
+      </div>
+      <!-- Skill Group 5 -->
+      <div class="skill-item">
+        <h3>Testing & Quality Assurance</h3>
+        <p>PyTest, JUnit, Selenium, CI/CD (GitHub Actions, Jenkins)</p>
+      </div>
+      <!-- Skill Group 6 -->
+      <div class="skill-item">
+        <h3>Additional Skills</h3>
+        <p>Kubernetes, Terraform, Apache, Agile, GIT, JIRA, Jenkins, Kafka, Power BI, Tableau</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me via any of the following channels:</p>
+    <div class="contact-links">
+      <!-- LinkedIn -->
+      <div class="contact-item">
+        <a href="https://www.linkedin.com/in/venkata-anirudh-pillala/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+      <!-- GitHub -->
+      <div class="contact-item">
+        <a href="https://github.com/venkatanirudh" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+      <!-- Email -->
+      <div class="contact-item">
+        <a href="mailto:pillalaanirudh@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+      <!-- Phone -->
+      <div class="contact-item">
+        <a href="tel:+14708841509">
+          <i class="fas fa-phone"></i> +1 (470) 884-1509
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
@@ -80,5 +249,21 @@
     </div>
   </footer>
 
+  <!-- JavaScript for Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </body>
 </html>
